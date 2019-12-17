@@ -22,7 +22,7 @@ class AddFriend extends React.Component {
 
   addFriend = () => {
     axiosWithAuth()
-      .post("/api/friends")
+      .post("/api/friends", this.state.newFriend)
       .then(res => {
         this.setState({
             newFriend: res.data
