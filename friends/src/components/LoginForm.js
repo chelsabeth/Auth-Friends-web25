@@ -1,4 +1,5 @@
 import React from "react";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 class LoginForm extends React.Component {
     state = {
@@ -22,14 +23,19 @@ class LoginForm extends React.Component {
         e.preventDefault();
         this.setState({
             isFetching: true
+        });
+        axiosWithAuth()
+        .post("/login",  this.state.credentials)
+        .then(res => {
+            localStorage.setItem("token", res.data.payload);
         })
-        //axiosWithAuth will go here
-    }
+        .catch(err => console.log("Sorry, an error has occured", err));
+    };
 
         render() {
             return (
                 <div>
-                    <form>
+                    <form onSubmit={this.login}>
                         <input
                         type="text"
                         name="username"
