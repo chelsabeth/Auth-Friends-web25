@@ -22,17 +22,20 @@ class LoginForm extends React.Component {
     login = e => {
         e.preventDefault();
         this.setState({
+            ...this.state,
             isFetching: true
         });
         axiosWithAuth()
-        .post("/login",  this.state.credentials)
+        .post("/api/login",  this.state.credentials)
         .then(res => {
             localStorage.setItem("token", res.data.payload);
+            this.props.history.push("/friendsList");
         })
         .catch(err => console.log("Sorry, an error has occured", err));
     };
 
         render() {
+            console.log(this.state);
             return (
                 <div>
                     <form onSubmit={this.login}>
