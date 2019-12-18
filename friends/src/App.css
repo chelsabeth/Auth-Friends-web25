@@ -97,6 +97,8 @@ a {
   display: flex;
   justify-content: space-between;
   width: 30%;
+  font-family: 'Indie Flower';
+  font-size: 19px;
 }
 
 .add-friend-form {

@@ -15,7 +15,7 @@ const TextInput = styled.input`
 
     const ButtonStyle = styled.button`
     width: 15%;
-    height: 50px;
+    height: 45px;
     margin: auto;
     border-radius: 5px;
     border: none;
