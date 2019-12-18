@@ -52,13 +52,13 @@ ul {
 li {
   list-style: none;
   margin-right: 6px;
-  color: SALMON;
+  color: #EB1B2C;
 }
 
 a {
   text-decoration: none;
   padding: 6px;
-  color: SALMON;
+  color: #EB1B2C;
 }
 
 .friends {
@@ -101,4 +101,9 @@ a {
 
 .add-friend-form {
   margin-bottom: 3%;
+}
+
+.form-wrapper {
+  display: flex;
+
 }
