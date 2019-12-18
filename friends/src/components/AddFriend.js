@@ -1,5 +1,6 @@
 import React from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import "../App.css";
 
 class AddFriend extends React.Component {
   state = {
